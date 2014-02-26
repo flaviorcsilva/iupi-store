@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="resources/template/layout.xhtml">
+	<ui:define name="content">
+
+		<div class="row">
+			<div class="caminhoAjuda twelve columns topMargin5">
+				<div class="eleven columns textoCinza topMargin10 texto9">
+					Você está aqui: <span class="textoCinza bold">Administração</span>
+					> <span class="textoCinza bold">Administração</span> > <span
+						class="textoAzul">Autorização</span>
+				</div>
+				<div class="ajuda one right columns texto9 bold noTopMargin">
+					<p>
+						<a href="#" title="Ajuda">Ajuda</a>
+					</p>
+				</div>
+			</div>
+			<div class="twelve columns noTopMargin right textoCinza texto9">
+				<p>
+					<span class="required">*</span> Preenchimento obrigatório
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="twelve columns topMargin10">
+				<h:form id="formulario">
+					<div class="filtros">
+						<div class="floatLeft space10">
+							<label for="dataInicial">Data Inicial <span
+								class="required">*</span></label> <input type="text" name="dataInicial"
+								id="dataInicial" title="Informe o data inicial" size="12"
+								class="minWidth100" />
+						</div>
+						<div class="floatLeft space10">
+							<label for="dataFinal">Data Final <span class="required">*</span></label>
+							<input type="text" name="dataFinal" id="dataFinal"
+								title="Informe o data final" size="12" class="minWidth100" />
+						</div>
+						<div class="floatLeft space10">
+							<label for="agencia">Agência</label> <input id="agencia"
+								name="agencia" type="text" size="9" class="minWidth100" />
+						</div>
+						<div class="floatLeft space10">
+							<label for="conta">Conta</label> <input id="conta" name="conta"
+								type="text" size="9" class="minWidth100" />
+						</div>
+						<div class="floatLeft space10">
+							<label for="select">Situação</label> <select id="select"
+								name="select" title="" class="minWidth100">
+								<option>-- Selecione --</option>
+								<option>Concluído pelo Operador</option>
+								<option>Concluído pela URA</option>
+								<option>Disponibilizado</option>
+								<option>Direcionado</option>
+								<option>Em atendimento</option>
+								<option>Rejeitado</option>
+							</select>
+						</div>
+						<div class="floatLeft space10">
+							<label for="terminal">Telefone Discado</label> <input
+								id="terminal" name="terminal" type="text" size="9"
+								class="minWidth100" />
+							<div class="clear"></div>
+						</div>
+						<div class="floatLeft space10">
+							<label for="terminal">Matr&iacute;cula</label> <input
+								id="terminal" name="terminal" type="text" size="9"
+								class="minWidth100" />
+							<div class="clear"></div>
+						</div>
+
+						<div class="botoes clear twelve columns">
+							<p:commandButton value="Consultar" styleClass="button"
+								action="consulta.xhtml"></p:commandButton>
+							<p:commandButton value="Novo Atendimento" styleClass="button"
+								action="adciona_atendimento_manual.xhtml"></p:commandButton>
+						</div>
+					</div>
+
+					<div class="resultado clear">
+
+						<div class="iconesExp">
+							<h:commandLink styleClass="ic ofc"
+								title="Exportar em formato OFC">
+								<p:dataExporter type="ofc" target="dataTable"
+									fileName="atendimentos" />
+							</h:commandLink>
+							<h:commandLink styleClass="ic ofx"
+								title="Exportar em formato OFX">
+								<p:dataExporter type="ofx" target="dataTable"
+									fileName="atendimentos" />
+							</h:commandLink>
+							<h:commandLink styleClass="ic pdf"
+								title="Exportar em formato PDF">
+								<p:dataExporter type="pdf" target="dataTable"
+									fileName="atendimentos" pageOnly="true" />
+							</h:commandLink>
+							<h:commandLink styleClass="ic txt"
+								title="Exportar em formato TXT">
+								<p:dataExporter type="txt" target="dataTable"
+									fileName="atendimentos" />
+							</h:commandLink>
+							<h:commandLink styleClass="ic print" title="Imprimir">
+								<p:printer target="dataTable" />
+							</h:commandLink>
+						</div>
+
+						<h1 class="titulo twelve columns noTopMargin">Consulta de
+							Elementos</h1>
+
+						<div class="twelve columns noTopMargin right">
+							<p class="data">
+								<span>Data:</span> dd/mm/aaaa
+							</p>
+							<p class="hora">
+								<span>Hora:</span> hh:mm:ss
+							</p>
+						</div>
+						<div class="three columns noLeftpMargin noTopMargin">
+							<p class="periodo">
+								<span>Período da Consulta:</span> dd/mm/aaaa a dd/mm/aaaa
+							</p>
+						</div>
+
+						<div class="atendimento">
+
+							<p:dataTable id="dataTable" var="atendimento"
+								value="#{consultaAtendimentoMBean.atendimentos}"
+								sortMode="multiple"
+								rows="#{consultaAtendimentoMBean.quantidade}" paginator="true"
+								styleClass="resultadoConsulta clear">
+
+								<p:column styleClass="center">
+									<p:commandLink action="detalhes_atendimento.xhtml">
+										<h:graphicImage library="theme" name="img/ico_detalhar.gif"
+											title="Detalhar" />
+										<f:setPropertyActionListener value="#{atendimento}"
+											target="#{detalhaAtendimento.atendimento}" />
+									</p:commandLink>
+								</p:column>
+
+								<p:column sortBy="#{atendimento.agencia}" headerText="Agência"
+									styleClass="center">
+									<h:outputText value="#{atendimento.agencia}" />
+								</p:column>
+
+								<p:column sortBy="#{atendimento.conta}" headerText="Conta"
+									styleClass="center">
+									<h:outputText value="#{atendimento.conta}" />
+								</p:column>
+
+								<p:column sortBy="#{atendimento.telefone_discado}"
+									headerText="Telefone Discado" styleClass="center">
+									<h:outputText value="#{atendimento.telefone_discado}" />
+								</p:column>
+
+								<p:column sortBy="#{atendimento.data}" headerText="Data"
+									styleClass="center">
+									<h:outputText value="#{atendimento.data}" />
+								</p:column>
+
+								<p:column sortBy="#{atendimento.duracao}" headerText="Duração"
+									styleClass="center">
+									<h:outputText value="#{atendimento.duracao}" />
+								</p:column>
+
+								<p:column sortBy="#{atendimento.situacao}" headerText="Situação"
+									styleClass="center">
+									<h:outputText value="#{atendimento.situacao}" />
+								</p:column>
+
+								<p:column sortBy="#{atendimento.matricula}"
+									headerText="Matrícula" styleClass="center">
+									<h:outputText value="#{atendimento.matricula}" />
+								</p:column>
+							</p:dataTable>
+
+						</div>
+
+					</div>
+
+				</h:form>
+
+			</div>
+
+		</div>
+
+	</ui:define>
+
+	<ui:define name="infoAdcionais">
+	</ui:define>
+
+</ui:composition>
+</html>

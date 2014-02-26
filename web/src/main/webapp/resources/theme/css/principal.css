@@ -1,0 +1,34 @@
+
+.lstProvedores .ui-picklist-list {
+   height: 159px !important;
+   width: 533px !important;
+}
+
+.lstElementos .ui-picklist-list {
+   height: 159px !important;
+   width: 533px !important;
+}
+
+.lstProvedores .ui-orderlist-list {
+   height: 159px !important;
+   width: 533px !important;
+   padding:20px;
+}
+
+.lstElementos .ui-orderlist-list {
+   height: 159px !important;
+   width: 533px !important;
+}
+
+.lstProvedores, .lstElementos {
+   border: 1px solid #B4B4B4 !important; 
+   background-color:#DDDDDD !important;
+}
+
+.dttElementos {   
+   width: 1111px !important;
+}
+
+.imagensAcao {
+   margin-left: 10px;
+}

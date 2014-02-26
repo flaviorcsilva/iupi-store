@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.org.iupi.store"
+    android:versionCode="1"
+    android:versionName="0.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_iupi_man"
+        android:label="@string/aplicacao_nome"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="br.org.iupi.store.splash.SplashScreen"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.org.iupi.store.login.Login"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="br.org.iupi.store.login.LoginForm"
+            android:icon="@drawable/icon_chave"
+            android:label="@string/txt_login"
+            android:theme="@style/IupiStoreTheme" >
+        </activity>
+        <activity
+            android:name="br.org.iupi.store.login.EsqueceuSuaSenhaForm"
+            android:icon="@drawable/icon_senha"
+            android:label="@string/info_esqueceu_sua_senha"
+            android:theme="@style/IupiStoreTheme" >
+        </activity>
+        <activity
+            android:name="br.org.iupi.store.loja.LojaForm"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:icon="@drawable/logo_iupi_store"
+            android:label="@string/txt_loja"
+            android:theme="@style/IupiStoreTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.org.iupi.store.usuario.ConsultaUsuarioForm"
+            android:icon="@drawable/icon_usuario"
+            android:label="@string/txt_usuarios"
+            android:launchMode="singleTop"
+            android:parentActivityName="br.org.iupi.store.usuario.ConsultaUsuarioForm"
+            android:theme="@style/IupiStoreTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="br.org.iupi.store.usuario.UsuarioForm"
+            android:icon="@drawable/icon_usuario"
+            android:label="@string/txt_cadastro_usuario"
+            android:theme="@style/IupiStoreTheme" >
+        </activity>
+        <activity
+            android:name="br.org.iupi.store.cliente.ConsultaClienteForm"
+            android:icon="@drawable/icon_cliente"
+            android:label="@string/txt_clientes"
+            android:theme="@style/IupiStoreTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+    </application>
+
+</manifest>

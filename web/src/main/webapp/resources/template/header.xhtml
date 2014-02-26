@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<body>
+	<ui:composition>
+
+		<div id="bemVindo" class="barra">
+			<p class="texto10 textoBranco">
+				Olá, <strong>#{loginMBean.login}</strong>. Último acesso em
+				DD/MM/AAAA hh:mm.
+			</p>
+		</div>
+
+		<div class="topo_fundo">
+			<div class="topo_fundo_02">
+				<div class="row">
+					<div class="twelve columns noTopMargin">
+						<div class="six columns topMargin30">
+							<h:graphicImage library="theme" name="img/logo_sis_wideview.png"
+								title="Wide View - BRB Banco de Brasília" />
+						</div>
+						<div class="six columns right topMargin30">
+							<a href="http://www.brb.com.br"><h:graphicImage
+									library="theme" name="img/logo_brb.png"
+									title="BRB Banco de Brasília" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:composition>
+</body>
+</html>

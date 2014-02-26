@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="resources/template/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+	<ui:define name="content">
+		<div class="row">
+			<div class="caminhoAjuda twelve columns topMargin5">
+				<div class="eleven columns textoCinza topMargin10 texto9">
+					Você está aqui: <span class="textoCinza bold">Administração</span>
+					> <span class="textoCinza bold">Administração</span> > <span
+						class="textoAzul">Autorização</span>
+				</div>
+				<div class="ajuda one right columns texto9 bold noTopMargin">
+					<p>
+						<a href="#" title="Ajuda">Ajuda</a>
+					</p>
+				</div>
+			</div>
+			<div class="twelve columns noTopMargin right textoCinza texto9">
+				<p>
+					<span class="required">*</span> Preenchimento obrigatório
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="twelve columns topMargin10">
+				<h:form>
+					<div class="filtros">
+						<div class="floatLeft space10">
+							<label for="select">Tipo de Elemento<span
+								class="required">*</span></label>
+							<h:selectOneMenu id="tipoDeElemento" name="select" title=""
+								class="minWidth100">
+								<f:selectItem itemLabel="Autorizador" />
+								<f:selectItem itemLabel="Carga" />
+								<f:selectItem itemLabel="Formatação" />
+								<f:selectItem itemLabel="Internet Banking" />
+								<f:selectItem itemLabel="Mobile Bank" />
+								<f:selectItem itemLabel="Plataforma Alta" />
+							</h:selectOneMenu>
+						</div>
+						<div class="floatLeft space10">
+							<label for="parametro">Horário limite para Carga de
+								Arquivos<span class="required">*</span>
+							</label>
+							<h:inputText type="text" name="parametro" id="parametro"
+								title="Informe o horário limite para Carga de Arquivos" size="4"
+								class="minWidth100" />
+						</div>
+						<div class="floatLeft space10">
+							<label for="aplicar">Aplicar a:<span class="required">*</span></label>
+							<h:selectOneRadio id="aplicarA" name="select" title=""
+								class="minWidth100">
+								<f:selectItem itemLabel="Todos" />
+								<f:selectItem itemLabel="Elemento Específico" />
+							</h:selectOneRadio>
+						</div>
+					</div>
+					<div class="botoes clear twelve columns">
+						<p:commandButton value="Confirmar" styleClass="button"
+							action="dadosIniciais.xhtml"></p:commandButton>
+						<p:commandButton value="Limpar" styleClass="button" action="#"></p:commandButton>
+						<p:commandButton value="Voltar" styleClass="button floatRight"
+							action="consulta.xhtml"></p:commandButton>
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

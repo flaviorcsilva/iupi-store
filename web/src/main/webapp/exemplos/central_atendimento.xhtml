@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="resources/template/layout.xhtml">
+	<ui:define name="content">
+		<p:ajaxStatus id="mybankAjaxStatus" widgetVar="as">
+			<p:outputPanel styleClass="row">
+				
+			</p:outputPanel>
+		</p:ajaxStatus>
+		<h:form>
+			<p:socket onMessage="handleMessage"
+				channel="/bilhete/#{loginMBean.ramal}"
+				widgetVar="subscriber" />
+			<p:confirmDialog id="atendimento" message="Aceita este atendimento?"
+				severity="alert" widgetVar="cd">
+				<p:commandButton value="Sim" action="dadosIniciais" ajax="false" />
+				<p:commandButton value="Não" onclick="cd.hide();" type="button" />
+			</p:confirmDialog>
+		</h:form>
+		<script type="text/javascript">
+			function handleMessage(data) {
+				/* cd.content.children().html( '<span class="ui-icon ui-icon-alert ui-confirm-dialog-severity"></span>Aceita este atendimento (' + data + ')?' )
+				cd.show(); */
+				window.webkitNotifications.createNotification(null, 'Aceita este atendimento?', 'Aceita este atendimento (' + data + ')?').show(); // note the show()
+			}
+		</script>
+	</ui:define>
+
+	<ui:define name="infoAdcionais">
+	</ui:define>
+
+</ui:composition>
+</html>

@@ -1,0 +1,230 @@
+@CHARSET "UTF-8";
+
+/*############################################################
+Sobrescrita do css da mensagem de erro da tela de Login
+###############################################################*/
+#loginMidle .ui-widget{
+	margin:0 10px 0 15px;
+}
+
+#loginMidle .row .four.columns{
+        width: 230px;
+}
+
+
+/*############################################################
+Sobrescrita do css DATATABLE do primefaces 
+###############################################################*/
+.ui-datatable .ui-datatable-data .ui-datatable-odd td {
+	background-color: #E9E9E9;
+	padding: 10px 0;
+}
+
+.ui-datatable .ui-datatable-data .ui-datatable-even td {
+	background-color: #FFFFFF;
+	padding: 10px 0;
+}
+
+.ui-datatable table {
+	border: none !important;
+}
+
+.ui-datatable thead th,.ui-datatable tbody td,.ui-datatable tfoot td {
+	border: none !important;
+	padding: 10px;
+}
+
+th.ui-state-default {
+	background: none repeat scroll 0 0 #C8DDED !important;
+}
+
+.ui-datatable table td {
+	text-align: center;
+	overflow: auto;
+}
+
+.ui-datatable .ui-datatable-data .ui-datatable-even td.text-left {
+	text-align: left;
+	padding-left: 10px;
+}
+
+.ui-datatable .ui-datatable-data .ui-datatable-odd td.text-left {
+	text-align: left;
+	padding: 10px;
+}
+/*############################################################
+Sobrescrita do css MESSAGES do primefaces 
+###############################################################*/
+
+.ui-messages-error li, .ui-messages-info li, .ui-messages-warn li {
+   text-align: left;
+}
+
+.ui-messages-info,.ui-messages-warn,.ui-messages-error,.ui-messages-fatal
+	{
+	padding: 10px 10px 5px 10px !important;
+}
+
+.ui-corner-all.ui-messages-error {
+	border-radius: 0 !important;
+}
+
+
+.ui-messages-info-summary,.ui-messages-warn-summary,.ui-messages-error-summary,.ui-messages-fatal-summary,.ui-message-info-summary,.ui-message-warn-summary,.ui-message-error-summary,.ui-message-fatal-summary
+	{
+	font-weight: normal !important;
+	margin-left: 0 !important;
+}
+
+
+.ui-messages-error-summary {
+    background: url("#{resource['theme/img:ic_m_error.gif']}") no-repeat
+        scroll 0px 30% rgba(0, 0, 0, 0) !important;
+    background-position: left top;
+    padding: 2px 50px;
+}
+
+.ui-messages-error ul {
+    margin: 0 !important;
+}
+
+.ui-messages-error ul li {
+    padding: 0 0 5px 0;
+}
+
+.ui-messages-error-icon {
+    background: none !important;
+    padding-left: 25px;
+    margin-top: -7px !important;
+    margin-left: -10px;
+    display: none;
+}
+
+.ui-messages-error {
+    background-color: #FFEBE1;
+    border: 1px solid #FF0000;
+    color: #666666 !important;
+    font-weight: normal !important;
+    font-size: 11px;
+}
+/*############################################################
+Sobrescrita do css CALENDAR do primefaces 
+###############################################################*/
+.ui-icon-calendar {
+	background-image: url("#{resource['theme/img:ic_cal_on.gif']}")
+		!important;
+	background-position: center center !important;
+	width: 16px;
+	height: 16px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	background: #003366 !important;
+}
+
+.ui-datepicker {
+	border: solid 1px #003366 !important;
+	background: #003366 !important;
+}
+
+.ui-datepicker-other-month,.ui-datepicker-unselectable,.ui-state-disabled
+	{
+	background: none repeat scroll 0 0 #FFFAB4 !important;
+	opacity: 1 !important;
+}
+
+.ui-datepicker th {
+	background: none repeat scroll 0 0 #C8DDED;
+	border: solid 1px #ccc !important;
+}
+
+.ui-datepicker td {
+	border: solid 1px #ccc !important;
+	background: #fff;
+}
+
+#ui-datepicker-div  a.ui-priority-secondary {
+	color: #C0AD00 !important;
+}
+
+#ui-datepicker-div .ui-state-default {
+	background: #fff;
+	display: table;
+	color: #000 !important;
+	font-weight: normal !important;
+	box-shadow: none !important;
+	text-align: center !important;
+	width: 100%;
+}
+
+#ui-datepicker-div table {
+	border: solid 1px #ccc !important;
+}
+
+td.ui-datepicker-today {
+	background: none repeat scroll 0 0 #C8DDED !important;
+}
+
+td a.ui-state-highlight {
+	background: none repeat scroll 0 0 #C8DDED !important;
+}
+
+#ui-datepicker-div td a.ui-state-hover {
+	background: none repeat scroll 0 0 #F58466 !important;
+}
+
+.ui-datepicker-title {
+	color: #fff;
+}
+
+.ui-dialog-title {
+	color: #fff !important;
+}
+
+/*############################################################
+Sobrescrita do css PICKLIST do primefaces 
+###############################################################*/
+.ui-picklist .ui-picklist-list{
+   border: 1px solid #B1B2BA !important;
+   border-radius: 5px !important;
+   width:  350px !important;
+}
+
+.ui-picklist .ui-picklist-caption{
+   background: none !important;
+        text-align: left !important;
+        font-size: 11px !important;
+        font-weight: bold !important;
+        color: #666666 !important;
+        padding: 2px 5px !important;
+}
+
+.ui-picklist-list .ui-state-hover {
+	background: none repeat scroll 0 0 #86ABD9 !important;
+	color: #FFF !important;
+}
+.ui-picklist-list .ui-state-highlight{
+	background: none repeat scroll 0 0 #86ABD9 !important;
+}
+ul.ui-picklist-list:HOVER {
+	background:
+		url("/brb-wideview-web/javax.faces.resource/bg_input.png.xhtml?ln=theme/img")
+		repeat scroll 0 0 #D4E2ED !important;
+}
+
+.ui-picklist .ui-button {
+	background:
+		url("/brb-wideview-web/javax.faces.resource/button.png.xhtml?ln=theme/img")
+		repeat scroll 0 -3px rgba(0, 0, 0, 0);
+}
+
+.ui-picklist .ui-button-icon-only {
+	height: 23px;
+	width: 25px !important;
+}
+
+.ui-picklist .ui-button:hover {
+	background: url("#{resource['theme/img:button.png']}") scroll 0px 23px
+		!important;
+	color: #FFFFFF !important;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="resources/template/layout.xhtml">
+	<ui:define name="content">
+
+		<div class="row">
+
+			<div class="twelve columns topMargin10">
+
+				<h1 class="titulo">Informações do Atendimento</h1>
+
+				<h:form>
+
+					<div class="atendimento">
+						<table>
+							<tr>
+								<td><p:outputLabel>Agência: </p:outputLabel> <h:outputText
+										value="#{detalhaAtendimento.atendimento.agencia}" /></td>
+								<td><p:outputLabel>Conta: </p:outputLabel> <h:outputText
+										value="#{detalhaAtendimento.atendimento.conta}" /></td>
+								<td><p:outputLabel>Tipo de Conta: </p:outputLabel> <h:outputText
+										value="Conta Poupança - Individual" /></td>
+							</tr>
+
+							<tr>
+								<td><p:outputLabel>Situação da Conta: </p:outputLabel> <h:outputText
+										value="Desbloqueada para atendimento no canal" /></td>
+								<td><p:outputLabel>Tipo de Pessoa: </p:outputLabel> <h:outputText
+										value="Pessoa Física" /></td>
+								<td><p:outputLabel>Telefone Discado: </p:outputLabel> <h:outputText
+										value="(99) 9999-9999" /></td>
+							</tr>
+
+							<tr>
+								<td><p:outputLabel>Telefone Digitado: </p:outputLabel> <h:outputText
+										value="(99) 9999-9999" /></td>
+								<td><p:outputLabel>Situação do Telefone Discado: </p:outputLabel>
+									<h:outputText value="Desbloqueado para atendimento no canal" />
+								</td>
+								<td><p:outputLabel>Data: </p:outputLabel> <h:outputText
+										value="DD/MM/AAAA" /></td>
+							</tr>
+							<tr>
+								<td><p:outputLabel>Hora Inicial: </p:outputLabel> <h:outputText
+										value="HH:mm:SS" /></td>
+								<td><p:outputLabel>Hora Final: </p:outputLabel> <h:outputText
+										value="HH:mm:SS" /></td>
+								<td><p:outputLabel>Duração: </p:outputLabel> <h:outputText
+										value="HH:mm:SS" /></td>
+							</tr>
+							<tr>
+								<td><p:outputLabel>Situação do Atendimento: </p:outputLabel>
+									<h:outputText value="Concluído pela URA" /></td>
+								<td><p:outputLabel>Matrícula: </p:outputLabel> <h:outputText
+										value="Xxxxxxxxxxxxx" /></td>
+								<td><p:outputLabel>Nome do operador: </p:outputLabel> <h:outputText
+										value="Xxxxxxxxxxxx Xxxxxxxxx Xxxxxxxxxxx" /></td>
+							</tr>
+							<tr>
+								<td colspan="3"><p:outputLabel>Transações Realizadas:</p:outputLabel>
+									<h:outputText value="Extrato CDB" /></td>
+							</tr>
+
+						</table>
+					</div>
+
+					<div class="botoes clear twelve columns">
+						<p:commandButton value="Voltar" styleClass="button floatRight"
+							action="consulta.xhtml"></p:commandButton>
+					</div>
+
+				</h:form>
+
+			</div>
+
+		</div>
+
+	</ui:define>
+
+	<ui:define name="infoAdcionais">
+	</ui:define>
+
+</ui:composition>
+</html>

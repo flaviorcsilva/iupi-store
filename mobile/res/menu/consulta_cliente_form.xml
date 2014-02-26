@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mnuPesquisaCliente"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/icon_pesquisar"
+        android:showAsAction="always"
+        android:title="@string/info_pesquisa_por_nome"/>
+
+</menu>

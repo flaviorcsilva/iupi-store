@@ -1,0 +1,183 @@
+.textoBranco {
+	color: #FFFFFF;
+}
+
+.textoCinza {
+	color: #808080;
+}
+
+.textoCinzaEscuro {
+	color: #999999;
+}
+
+.textoAzul {
+	color: #0099FF;
+}
+
+.textoAzulEscuro{
+	color: #001B75;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.texto9 {
+	font-size: 9px;
+}
+
+.texto10 {
+	font-size: 10px;
+}
+
+.texto20{
+	font-size: 20px;
+}
+
+.required {
+	color: #E31B23;
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.noLeftpMargin{
+	margin-left: 0px !important;
+}
+
+.noTopMargin {
+	margin-top: 0px !important;
+}
+
+.topMargin5 {
+	margin-top: 5px;
+}
+
+.topMargin10 {
+	margin-top: 12px;
+}
+
+.topMargin30 {
+	margin-top: 30px;
+}
+
+.topMarginLess10 {
+	margin-top: -10px;
+}
+
+
+.topMarginLess20 {
+	margin-top: -20px;
+}
+
+
+.bottomMargin30 {
+	margin-bottom: 30px;
+}
+
+.space10{
+	padding: 0 10px 0 0;
+}
+
+.clear{
+	clear: both;
+}
+
+.mensagem {
+    font-size: 11px !important;
+    margin: 5px 0;
+    padding: 5px 0px 5px 10px;
+    text-align: left;
+    display: none;
+}
+
+.alerta {
+    border: 1px solid #C6AF0F;
+    background-color: #FFFFE1;
+}
+
+.erro {
+    border: 1px solid #FF0000;
+    background-color: #FFEBE1;
+}
+
+.sucesso {
+    border: 1px solid #1CBAED;
+    background-color: #E1ECFF;
+}
+
+.hide{
+	display:none;
+}
+
+.minWidth100{	
+	min-width: 100px;
+}
+
+.widthFull{
+	width: 100%;
+}
+
+.titulo{
+	color: #003366;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.ic{
+    display: block;
+    float: right;
+    height: 16px;
+    margin: 0 0 0 10px;
+    width: 16px;
+}
+
+.ofc{
+	background: url('#{resource['theme/img/icons:ic_exp_ofc.png']}') no-repeat scroll 0 0 transparent;
+}
+
+.ofx{
+	background: url('#{resource['theme/img/icons:ic_exp_ofx.png']}') no-repeat scroll 0 0 transparent;	
+}
+
+.pdf{
+	background: url('#{resource['theme/img/icons:ic_exp_pdf.png']}') no-repeat scroll 0 0 transparent;	
+}
+
+.txt{
+	background: url('#{resource['theme/img/icons:ic_exp_txt.png']}') no-repeat scroll 0 0 transparent;	
+}
+
+.print{	
+	background: url('#{resource['theme/img/icons:ic_exp_print.png']}') no-repeat scroll 0 0 transparent;
+}
+.columnLeft {
+    width: 50%;
+    text-align: left;
+}
+.columnRight {
+    width: 50%;
+    text-align: right;
+}

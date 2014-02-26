@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Aplicação -->
+    <string name="aplicacao_nome">iupi! Store</string>
+    <string name="database">loja.db</string>
+
+    <!-- Textos -->
+    <string name="txt_acessar">Acessar</string>
+    <string name="txt_cadastro_usuario">Cadastro de Usuário</string>
+    <string name="txt_cancelar">Cancelar</string>
+    <string name="txt_clientes">Clientes</string>
+    <string name="txt_configuracoes">Configurações</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_enviar_senha">Enviar Senha</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_loja">Loja</string>
+    <string name="txt_nome">Nome</string>
+    <string name="txt_produtos">Produtos</string>
+    <string name="txt_salvar">Salvar</string>
+    <string name="txt_senha">Senha</string>
+    <string name="txt_usuarios">Usuários</string>
+    <string name="txt_vendas"> Vendas</string>
+
+    <!-- Login -->
+    <string name="info_confirme_senha">Confirme a Senha</string>
+    <string name="info_digite_seu_email_cadastrado">Digite seu e-mail cadastrado para receber sua senha</string>
+    <string name="info_esqueceu_sua_senha">Esqueceu sua senha?</string>
+    <string name="info_logando">Logando&#8230;</string>
+    <string name="info_pesquisa_por_nome">Pesquisa por Nome</string>
+
+    <!-- Loja -->
+    <string name="menu_mais_opcoes">Mais Opções</string>
+    <string name="menu_sincronizar_dados">Sincronizar Dados</string>
+    <string name="menu_localizar_loja">Localizar Loja</string>
+    <string name="menu_preferencias">Preferências</string>
+
+    <!-- Usuários -->
+    <string name="menu_cadastra_usuario">Cadastra Usuário</string>
+
+    <!-- Erros -->
+    <string name="erro_campo_obrigatorio">Este campo é obrigatório</string>
+    <string name="erro_email_invalido">Este endereço de email é inválido</string>
+    <string name="erro_confirmacao_senha">A senha e a confirmação da senha devem ser iguais</string>
+
+</resources>

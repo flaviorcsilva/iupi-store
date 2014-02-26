@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+	<p:ajaxStatus id="mybankAjaxStatus" widgetVar="as"
+		style="width:64px;height:64px;position:fixed;right:5px;bottom:5px">
+		<f:facet name="default">
+			<h:outputText value="Idle" />
+		</f:facet>
+	</p:ajaxStatus>
+	<h:form>
+		<p:commandButton type="button" value="Set notification"
+			onclick="setNotification()">
+			<!-- <p:ajax oncomplete="cd.show()" /> -->
+		</p:commandButton>
+		<p:commandButton type="button" value="Notification"
+			onclick="fetchTweets()">
+			<!-- <p:ajax oncomplete="cd.show()" /> -->
+		</p:commandButton>
+		<p:confirmDialog message="Are you sure about destroying the world?"
+			header="Initiating destroy process" severity="alert" widgetVar="cd">
+			<p:commandButton value="Yes Sure"
+				actionListener="#{buttonBean.destroyWorld}" oncomplete="cd.hide()" />
+			<p:commandButton value="Not Yet" onclick="cd.hide();" type="button" />
+		</p:confirmDialog>
+	</h:form>
+</h:body>
+<h:outputScript>
+function setNotification() {
+  window.webkitNotifications.requestPermission();
+}
+
+function fetchTweets() {
+	window.webkitNotifications.createNotification(null, "qwer","zxcv").show(); // note the show()
+};
+</h:outputScript>
+</html>

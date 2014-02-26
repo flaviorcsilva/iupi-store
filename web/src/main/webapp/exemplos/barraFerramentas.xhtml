@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<body>
+	<ui:composition>
+		<div class="row">
+			<div class="barraFerramentas twelve columns green">
+
+				<div id="status" class="one columns">
+					<ul>
+						<li>
+							<p class="inforAdicional" for="infoAdicinaisDetalhesStatus">
+								<h:graphicImage library="theme"
+									name="img/ic_m_telefone_autenticado.png" />
+							</p>
+						</li>
+						<div id="infoAdicinaisDetalhesStatus"
+							class="bold infoDetalhes hide">
+							<ul>
+								<li>
+									<p>Cliente está ligando de número cadastrado</p>
+								</li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+				<div id="saldo" class="two columns">
+					<ul>
+						<li>
+							<p class="bold inforAdicional" for="infoAdicinaisDetalhesSaldo">
+								Saldo: <span class="positivo">R$5.674,21 +</span>
+							</p>
+						</li>
+						<div id="infoAdicinaisDetalhesSaldo"
+							class="bold infoDetalhes hide">
+							<ul>
+								<li><p class="informacoesTitulo">Posição Financeira</p></li>
+								<li><p>
+										Saldo Conta Corrente: <span class="positivo floatRight">R$5.674,21
+											+</span>
+									</p></li>
+								<li><p>
+										Saldo Poupança / CDB Salário: <span
+											class="positivo floatRight">R$42.412,65 +</span>
+									</p></li>
+								<li><p>
+										Limite de Cheque Especial: <span class="positivo floatRight">R$9.000,00
+											+</span>
+									</p></li>
+								<li><p>
+										Saldo Bloqueado 1 Dia: <span class="positivo floatRight">R$412,32
+											+</span>
+									</p></li>
+								<li><p>
+										Saldo Bloqueado 2 Dias: <span class="neutro floatRight">R$0,00</span>
+									</p></li>
+								<li><p>
+										Saldo Bloqueado mais de 2 Dias: <span
+											class="negativo floatRight">R$1.500,00 -</span>
+									</p></li>
+								<li><p>
+										Saldo Bloqueado no Dia: <span class="neutro floatRight">R$0,00</span>
+									</p></li>
+								<li><p>
+										Saldo Provisionado: <span class="neutro floatRight">R$0,00</span>
+									</p></li>
+								<li><p>
+										Bloqueio Judicial: <span class="neutro floatRight">R$0,00</span>
+									</p></li>
+								<li><p>
+										Saldo Disponível: <span class="positivo floatRight">R$48.086,86</span>
+									</p></li>
+								<li><p>&nbsp;</p></li>
+								<li><p class="informacoesTitulo">Outras Informações</p></li>
+								<li><p>
+										Juros: <span class="neutro floatRight">R$0,00</span>
+									</p></li>
+								<li><p>
+										Taxa de Juros: <span class="positivo floatRight">3,20%</span>
+									</p></li>
+								<li><p>
+										Valor do IOF: <span class="neutro floatRight">R$0,00</span>
+									</p></li>
+								<li><p>
+										Data de Vencimento do Contrato: <span
+											class="neutro floatRight">20/12/2013</span>
+									</p></li>
+								<li><p>
+										Saldo Médio: <span class="positivo floatRight">R$908,07
+											+</span>
+									</p></li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+				<div id="limite" class="two columns">
+					<ul>
+						<li>
+							<p class="bold inforAdicional" for="infoAdicinaisDetalhesLimite">
+								Limite: <span class="neutro">R$10.000,00</span>
+							</p>
+						</li>
+						<div id="infoAdicinaisDetalhesLimite"
+							class="bold infoDetalhes hide">
+							<ul>
+								<li><p>
+										Valor Limite Geral: <span class="floatRight">R$10.000,00</span>
+									</p></li>
+								<li><p>
+										Valor Limite GPS: <span class="floatRight">R$2.000,00</span>
+									</p></li>
+								<li><p>
+										Valor Limite TED D: <span class="floatRight">R$3.000,00</span>
+									</p></li>
+								<li><p>
+										Valor Limite TED E: <span class="floatRight">R$3.000,00</span>
+									</p></li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+
+				<div id="infoAdicionaisBotoes">
+					<a href="#">Direcionar Atendimento</a> <a href="#">Finalizar
+						Atendimento</a>
+				</div>
+
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.inforAdicional').hover(function() {
+					exibe($(this), true);
+				}, function() {
+					exibe($(this), false);
+				});
+			});
+			function exibe(obj, mostra) {
+				var forAttribute = obj.attr('for');
+				var elemento = $('#' + forAttribute);
+				if (mostra) {
+					elemento.removeClass('hide');
+				} else {
+					elemento.addClass('hide');
+				}
+			}
+		</script>
+	</ui:composition>
+
+</body>
+
+</html>

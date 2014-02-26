@@ -1,0 +1,46 @@
+Desenvolver um aplicativo contendo os itens listados abaixo. O aplicativo deverá estar funcional, ou seja, deverá estar pronto para instalação em aparelhos com o sistema operacional Android na versão mínima 4.1. O executável do aplicativo deverá ser entregue através da ferramenta Test Flight (http://www.testflightapp.com) e o código fonte pelo Blackboard.
+Itens obrigatórios do aplicativo:
+1) 4 ou mais atividades; OK
+2) Configurar pelo menos 4 eventos do cliclo de vida das atividades; OK
+3) Gravar o estado a atividade e recuperar o estado após a rotação do aparelho (retrato ou paisagem); OK
+4) Uso de Intents Explicitas e Implícitas; OK
+5) Uso do banco de dados SQLite; OK
+6) Uso da câmera do aparelho; OK
+7) Uso dos componentes ListView, EditText, TextView, ImageView, Button, ProgressDialog; OK
+8) Uso das classes AsyncTask;
+9) Chamada a serviços usando o protocolo HTTP;
+10 ) Uso de Broadcast Receiver (interceptar mensagens SMS e processar informações);
+11) Uso de Relative Layout e Linear Layout;
+12) Configurações de permissões no aplicativo; OK
+13) Uso de Serviços (startService);
+14) Uso do adaptador ArrayAdapter;
+15) Google Cloud Message (GCM);
+16) Uso de notificação do sistema operacional;
+17) Uso de imagens no aplicativo; OK
+18) Mensagens do aplicativo no arquivo string.xml; OK
+19) Uso de classe anônimas para eventos; OK
+20) Tratamento de exceções nas funções de banco de dados e chamadas HTTP.
+O aplicativo deverá conter TODOS os itens citados acima e deverá estar funcional (deve executar sem erros) para avaliação e testes.
+Abaixo segue a sugestão para um aplicativo:- Aplicativo para registro de vendas de peças para computador com as seguintes funcionalidades:
+     a) Cadastro, alteração e exclusão de usuários do aplicativo;
+     b) Cadastro, alteração e exclusão de clientes;
+     c) Cadastro, alteração e exclusão de produtos;
+     d) Registro de vendas dos produtos para clientes;
+     e) Sincronização dos dados (estoque, registro de vendas, clientes e produtos) para um servidor através de chamadas HTTP/REST;
+     f) Aviso de novas vendas e produtos através de mensagens no GCM;
+     g) Cadastrar cliente através das informações recebidas por SMS.
+     
+1) Teremos de ter 2 aplicativos, basicamente um servidor e um cliente, correto?
+	Correto. O aplicativo servidor terá a função de centralizar os dados das vendas e produtos que posteriormente serão sincronizados com os clientes através de uma chamada a um Webservice via HTTP. Caso o estoque de produtos fique abaixo de zero uma compra automática de produtos no servidor deverá ocorrer. Apenas para não ficar com quantidade negativa. Apenas um INSERT na tabela que guarda o estoque dos produtos.
+
+2) Porém o sistema terá de ter um Banco de dados no SQLite, ou seja terá de ser no celular e não no servidor.
+	O banco de dados deverá estar no CLIENTE e no SERVIDOR sincronizados em um período de tempo que você está livre para determinar. A sincronização deve ocorrer através de Webservice via HTTP. Recomendo usar JSON para transferência dos dados.
+
+3) E o celular deverá fazer o cadastro depois de receber um sms, ou seja, de novo é descrito que o banco com cadastro de produtos e usuários será no celular. Então, pra que demônios teríamos um servidor? Mandar todos os dados para que todos os aplicativos cadastrem cada foto de cada produto no celular de cada um? Isso não faz sentido.
+
+	O cadastro via SMS é APENAS para clientes. O servidor também será responsável por enviar as mensagens GCM para os dispositivos cadastrados. O banco de dados do Servidor deverá ter uma tabela que armazena os ID registrados dos aparelhos para enviar mensagens para eles (ex. mensagem para sinalizar a necessidade de sincronização) conforme demonstrado na aula.
+
+4) Quando é a data limite para entrega do trabalho?
+
+	A data limite está cadastrada no seu Blackboard. 01/03/2014
+     

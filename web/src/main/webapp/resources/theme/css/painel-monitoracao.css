@@ -1,0 +1,424 @@
+/****************************************************************/
+/********** CONFIGURAÇÕES ESPEC�FICAS PARA O PROJETO **********/
+/****************************************************************/
+/*********************** Permite alteração **********************/
+/****************************************************************/
+
+/* CABEÇALHO TELA CHEIA | Início */
+#full_screen{
+    margin:0;
+}
+.icones_tela_cheia {
+    top:82px;   
+}
+
+#header_tela_cheia { 
+    text-align:center;
+}
+.Elementos{
+    padding:0;
+}
+#header_tela_cheia .content,
+#full_screen .content{ 
+    width:98%; 
+    margin:0 auto; 
+    text-align:left;
+}
+#header_tela_cheia .marcas { 
+    background:#0099ff url("../img/bg_head.png") repeat-x; 
+    height:80px;
+}
+#header_tela_cheia .marcas .textura { 
+    background: url("../img/bg_head_text.png") no-repeat center; 
+    height:80px;
+}
+#header_tela_cheia .content .tela_cheia{
+    width: 50% !important;
+    margin: 0 !important;
+    background-size: 233px !important;
+    background-repeat: no-repeat  !important;
+    margin-top:16px !important; 
+}
+#header_tela_cheia .marcas .sistema { 
+    margin:30px 0px 0px 15px; 
+    height:40px; 
+    width:233px; 
+    float:left; 
+    background-repeat:no-repeat;
+}
+#header_tela_cheia .marcas .banklink { 
+    background: url("../img/sistemas/logo_sis_banklink.png");
+}
+#header_tela_cheia .marcas .billin { 
+    background: url("../img/sistemas/logo_sis_billin.png");
+}
+#header_tela_cheia .marcas .bonuskeeper { 
+    background: url("../img/sistemas/logo_sis_bonuskeeper.png");
+}
+#header_tela_cheia .marcas .cardware { 
+    background: url("../img/sistemas/logo_sis_cardware.png");
+}
+#header_tela_cheia .marcas .cashboard { 
+    background: url("../img/sistemas/logo_sis_cashboard.png");
+}
+#header_tela_cheia .marcas .enforce {
+    background: url("../img/sistemas/logo_sis_enforce.png");
+}
+#header_tela_cheia .marcas .extrabank { 
+    background: url("../img/sistemas/logo_sis_extrabank.png");
+}
+#header_tela_cheia .marcas .extracash { 
+    background: url("../img/sistemas/logo_sis_extracash.png");
+}
+#header_tela_cheia .marcas .intollerant { 
+    background: url("../img/sistemas/logo_sis_intollerant.png");
+}
+#header_tela_cheia .marcas .mybank { 
+    background: url("../img/sistemas/logo_sis_mybank.png");
+}
+#header_tela_cheia .marcas .netbanking { 
+    background: url("../img/sistemas/logo_sis_netbanking.png");
+}
+#header_tela_cheia .marcas .nextbank { 
+    background: url("../img/sistemas/logo_sis_nextbank.png");
+}
+#header_tela_cheia .marcas .omnibank { 
+    background: url("../img/sistemas/logo_sis_omnibank.png");
+}
+#header_tela_cheia .marcas .wideview {
+    background: url("../img/sistemas/logo_sis_wideview.png");
+}
+#header_tela_cheia .marcas .content .brb { 
+    margin-right:15px; 
+    text-align:right; 
+    padding:20px 0px; 
+    float:right;
+}
+/* CABEÇALHO TELA CHEIA | Fim */
+
+/* BOTÃO EXIBIR RESULTADOS EM TELA CHEIA */
+.filtros form #bt_tela_cheia {
+    background:url("../img/forms/button-tela-cheia.png") no-repeat top; 
+    width:213px; 
+    height:25px; 
+    cursor:pointer; 
+    vertical-align:middle;
+}
+.filtros form #bt_tela_cheia:hover { 
+    background-position:center bottom; 
+    margin-top:1px;
+}
+
+/* OPÇÕES DE ALINHAMENTO DE TEXTO */
+.esquerda {
+    text-align:left;
+}
+.centralizado {
+    text-align:center;
+}
+.direita {
+    text-align:right;
+}
+
+/* JANELA COM OP��ES DE A��ES | In�cio */
+.highslide-body label {
+    margin:5px 0 0 0px !important;
+}
+.highslide-body input {
+    margin:0px 0 0 0px !important;
+}
+/* JANELA COM OP��ES DE A��ES | Fim */
+.mensagem { 
+    z-index:0 !important; 
+    visibility:visible; 
+}
+
+/* PAINEL DE MONITORAMENTO| Inicio */
+.painelMonitoracao #painel {
+    display: inline-block;
+}
+.painelMonitoracao li {
+    cursor: pointer;
+    float: left;
+    margin: 4px;
+    text-align: center;
+    background-position: 50% 30% !important;
+    color: #111;
+    border: 1px solid #fff;
+    font-size: 11px;
+    font-weight:bold;
+    background-size:80% !important;
+    text-align:center;
+    list-style:none;
+}
+.painelMonitoracao li a .nomeElemento{
+    color:#000;
+    text-decoration:none;
+    background:none;
+    padding:0;
+    vertical-align:baseline;
+    position: relative;
+    top: 40px;
+}
+.painelMonitoracao li a:hover{
+    text-decoration:none;
+}
+.painelMonitoracao li:hover {
+    border: 2px solid #ccc; 
+    margin: 3px;
+}
+.painelMonitoracao .banklink {
+    background: url('#{resource['theme/img/painel:logo_sis_banklink.png']}') no-repeat center 10px;
+}
+.painelMonitoracao .extrabank {
+    background: url('#{resource['theme/img/painel:logo_sis_extrabank.png']}') no-repeat center 10px;
+}
+.painelMonitoracao .extracash {
+    background: url('#{resource['theme/img/painel:logo_sis_extracash.png']}') no-repeat center 10px;
+}
+.painelMonitoracao .mybank {
+    background: url('#{resource['theme/img/painel:logo_sis_mybank.png']}') no-repeat center 10px;
+}
+.painelMonitoracao li .qtd_instancias{
+    background: #222; 
+    font-weight: bold; 
+    font-size: 11px; 
+    color: #fff; 
+    display: block; 
+    width: 15px; 
+    height: 15px; 
+    padding:0;
+    text-align: center;
+	position: relative;
+	left: 57px;
+}
+.painelMonitoracao li ul li span{
+    position:relative;
+    top:55px;
+}
+.painelMonitoracao > li{
+    position:relative;
+}
+.painelMonitoracao li ul{
+    display:none;
+    position:absolute;
+    z-index:10;
+    left:40px;
+    top:30px;
+    background-color:#fff;
+    padding: 5px 10px;
+}
+.painelMonitoracao li ul li{
+    float:left;
+}
+.painelMonitoracao li:hover > ul{
+    display:block;
+}
+.painelMonitoracao a,
+.painelMonitoracao li ul li{
+    display:block;
+    width:72px;
+    height:72px;
+}
+/* ELEMENTOS - STATUS | */
+.painelMonitoracao .alerta {
+    background-color: #FC3;
+}
+.painelMonitoracao .indisponivel {
+    background-color: #ef4135;
+}
+.painelMonitoracao .disponivel {
+    background-color: #51af65;
+}
+.corLegenda {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-bottom: -5px;    
+    margin-right: 5px;
+}
+.resultado_links .alerta {
+    background: #FC3;   
+}
+.resultado_links .indisponivel {
+    background: #ef4135;    
+}
+.resultado_links .disponivel {
+    background: #51af65;    
+}
+.iconeLegenda {
+    background: url('#{resource['theme/img:icoLegenda.png']}') no-repeat center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: -5px 15px 0 15px;
+    float: left;
+}
+.iconesPainel {
+    top:40px;   
+}
+
+/* ******************** MODAL ******************** */
+.modalElemento, .modalLegenda, .modalStatus, .modalDetErros {
+    display:none;   
+}
+.wideviewPainel {
+    width: 50% !important;
+    margin: 0 !important;
+    background-size: 50% !important;
+    background-repeat: no-repeat  !important;
+    margin-top:16px !important; 
+}
+.resultado_links img:hover {
+    cursor:pointer;
+}
+    
+select {
+    border-radius: 3px;
+    padding: 3px !important;
+    border-color: #aaa; 
+}
+select:hover {
+    background-color:: 3px;
+    border-color: #0099ff;  
+}
+#msgAlerta,
+#msgErro,
+#msgSucesso,
+#ag01,
+#ag02{
+    display:none;
+    position: relative;
+    z-index: 10;
+}
+.bts input[type="button"]{
+    width:15px;
+}
+.temporizador{
+    text-align: right;
+    clear: both;
+    margin-top: -25px;
+    width: 100%;
+    height: 40px;
+}
+.photo {
+    width: 300px;
+    text-align: center;
+}
+.photo .ui-widget-header {
+    margin: 1em 0;
+}
+.map {
+    width: 350px;
+    height: 350px;
+}
+.ui-tooltip {
+    max-width: 350px;
+    border:0px !important;
+}
+#barraPesquisa label{
+    display: inline; 
+    margin: 0 10px;
+}
+#barraPesquisa div{
+    border:none; 
+    margin-right: 15px; 
+    text-align: right; 
+    float: right;
+}
+#resultadoFixo{
+    float:right; 
+    padding:0; 
+    margin-top:-15px;
+}
+#resultadoFixo .resultado{
+    width:300px;
+}
+#resultadoFixo .resultado_links .esq{
+    width: 100px;
+    padding: 10px 6px;
+    text-align: left;
+}
+
+.painelListaElemento h1{
+    margin-left:0;
+}
+.modalStatus h1,
+.modalElemento h1{
+    margin-left: 20px;
+}
+.paienlListaElemento table a{
+    text-decoration:underline;
+}
+
+[disabled],
+.NFButton[disabled]{
+    cursor:not-allowed;
+}
+.filtros form .picklist .move {
+    margin-left: 365px;
+}
+.filtros form .picklist .bts.add_remove{
+    margin-left:-34px;
+}
+.add_remove button span,
+.move button span{
+    background-image:url('#{resource['theme/img:ui_icons.gif']}');
+    display:block;
+    text-indent:-9000em;
+    width:8px;
+    height:5px;
+}
+.move button span{
+    width:5px;
+    height:8px;
+}
+.add_remove button[name="inclui_todos"] span{
+    background-position: -212px -38px;
+}
+.add_remove button[name="inclui_um"] span{
+    background-position: -36px -38px;
+}
+.add_remove button[name="retira_um"] span{
+    background-position: -100px -38px;
+}
+.add_remove button[name="retira_todos"] span{
+    background-position: -245px -38px;
+}
+.move button[name="move_inicio"] span{
+    background-position: -198px -36px;
+}
+.move button[name="move_cima"] span{
+    background-position: -5px -36px;
+}
+.move button[name="move_baixo"] span{
+    background-position: -70px -36px;
+}
+.move button[name="move_final"] span{
+    background-position: -230px -36px;
+}
+#gerenciaAcoesAutomaticas fieldset label{
+    padding:0;
+    color:inherit;
+}
+fieldset legend{
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+    font-size:14px;
+    display: block;
+    padding:0 10px;
+    margin:0;
+    border:none;
+    background:none;
+    color:inherit;
+}
+fieldset fieldset legend{
+    font-size:11px;
+}
+
+fieldset fieldset .alinhar{
+    padding:0px 20px 20px 0px !important;
+}
+.login .obr{
+    padding: 5px 25px 1px 0;
+}

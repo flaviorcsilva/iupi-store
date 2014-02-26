@@ -1,0 +1,421 @@
+body {
+	font: 11px Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+
+img {
+	border: none;
+}
+
+.barra {
+	background: url("#{resource['theme/img:bg_head_id.png']}")
+		repeat-x transparent;
+	height: 25px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+.barra p {
+	width: 1120px;
+	margin: 0 auto;
+	padding: 6px 0 6px 15px;
+}
+
+.barra p strong {
+	color: #0099FF;
+}
+
+#logo_myBank,#logo_brb {
+	margin: 30px 0 0 15px;
+}
+
+.topo_fundo {
+	background: url("#{resource['theme/img:bg_head.png']}") repeat-x
+		scroll 0 0 #0099FF;
+	height: 120px;
+	margin-top: 25px;
+	z-index: 1;
+}
+
+.topo_fundo_02 {
+	background: url("#{resource['theme/img:bg_head_text.png']}") center no-repeat;
+	height: 120px;
+	margin-top: 25px;
+	z-index: 1;
+}
+
+#menuNavegacao {
+	background: url("#{resource['theme/img:bg_head_menu.png']}")
+		repeat-x scroll 0 0 transparent;
+	color: #003366;
+	font-size: 10px;
+	height: 25px;
+}
+
+.menu {
+	background: url("#{resource['theme/img:bg_head_menu.png']}")
+		repeat-x scroll 0 0 transparent;
+	color: #003366;
+	font-size: 10px;
+	height: 25px;
+	border: none;
+	z-index: 99999;
+}
+
+.unidade {
+	float: right;
+	margin-top: -25px;
+}
+
+.unidade a {
+	text-decoration: none;
+	color: #808080;
+}
+
+.unidade a:HOVER {
+	color: #0099FF;
+}
+
+#rodape {
+	background: url("#{resource['theme/img:bg_foot.png']}") repeat-x
+		top;
+	text-align: left;
+	font-size: 11px;
+	position: fixed;
+	height: 40px;
+	bottom: 0px;
+	width: 100%;
+	clear: both;
+	color: #fff;
+	font-weight: bold;
+}
+
+#rodape a {
+	text-decoration: none;
+	color: #8ed8f8;
+	font-weight: normal;
+}
+
+#rodape a:link {
+	text-decoration: none;
+	color: #8ed8f8;
+}
+
+#rodape a:visited {
+	text-decoration: none;
+	color: #8ed8f8;
+}
+
+#rodape a:hover {
+	text-decoration: none;
+	color: #44c8f5;
+}
+
+#rodape a:active {
+	text-decoration: none;
+	color: #8ed8f8;
+}
+
+.barraFerramentas{
+    border: 1px solid #A8BCE4;
+    height: 30px;
+    margin: 10px 0 10px 0;
+}
+
+.barraFerramentas #status{
+	margin: -3px 0px 0px -30px;
+}
+
+.barraFerramentas #saldo{
+	margin: -3px 0 0;
+}
+
+.barraFerramentas #limite{
+	margin: -3px 0 0;
+}
+
+.barraFerramentas #status ul, .barraFerramentas #saldo ul, .barraFerramentas #limite ul{
+	margin: 0;
+	list-style: none;
+	list-style-type: none;
+}
+
+.scrollinfoAdcionais{
+	position:fixed !important;
+	z-index:99;
+	top: 40px;
+	max-width: 1120px;
+}
+
+.scrollcontent{
+	padding:26px 10px 60px;
+}
+
+.scrollMenu{
+	position: fixed;
+	top: 25px;
+	left: 0px;
+	width: 100%;
+	z-index: 999;
+}
+
+.scrollAbas{
+	margin-top: 50px !important;
+}
+
+.infoDetalhes{
+	position: absolute;
+	margin: -5px 1px 1px -11px;
+	background:#FFF;
+	border:1px solid #A8BCE4;
+	padding: 5px 30px 5px 0;
+	z-index:99;
+	min-width: 300px;
+}
+
+.infoAdicinaisDetalhesList{
+	margin: 0 20px 0 -20px !important;
+}
+
+#infoAdicionaisBotoes {
+    background: none #FFFFFF;
+    border: 1px solid #A8BCE4;
+    float: right;
+    margin: -1px -1px 0;
+    padding: 7px;
+}
+
+#infoAdicionaisBotoes a {
+    color: #808080;
+    margin: 8px 20px 0;
+    text-decoration: none;
+}
+
+#infoAdicionaisBotoes a:HOVER {
+    color: #0099FF;
+}
+
+.green{	
+	background: none #CDF1D2;
+}
+.yellow{	
+	background: none #f1eecd;
+}
+.red{	
+	background: none #CDF1D2;
+}
+
+.positivo{
+	color:#001B75;
+	margin-left: 6px;
+}
+
+.negativo{
+	color:#FF0000;
+	margin-left: 6px;
+}
+
+.neutro{
+	color:#666666;
+	margin-left: 6px;
+}
+
+.caminhoAjuda {
+	border-bottom: 2px solid #0099FF;
+}
+
+.ajuda {
+	
+}
+
+.ajuda p {
+	background: url("#{resource['theme/img/icons:ic_help.png']}")
+		no-repeat top right transparent;
+	height: 12px;
+	text-align: right;
+	padding: 2px 0;
+}
+
+.ajuda p:hover {
+	color: #0099FF;
+	background: url("#{resource['theme/img/icons:ic_help_over.png']}")
+		no-repeat top right transparent;
+}
+
+.ajuda p a {
+	color: #808080;
+	text-decoration: none;
+	margin: 0px 22px 0px 0px;
+}
+
+.ajuda p a:hover {
+	color: #0099FF;
+}
+
+input,textarea,select {
+	border-radius: 5px;
+	box-shadow: none !important;
+	border: 1px solid #b1b2ba !important;
+}
+
+input:FOCUS,textarea:FOCUS,select:FOCUS {
+	box-shadow: 5px 5px 5px #888888;
+	border: 1px solid #6cacc8;
+	background:url("#{resource['theme/img:bg_input.png']}")  #d4e2ed  repeat scroll 0 0 !important;
+}
+
+.button{
+	background: url("#{resource['theme/img:button.png']}") scroll 0px -3px;
+	color: #FFFFFF !important;
+	font-weight: bold !important;
+	font-size: 10px;
+	font-family: Arial,Helvetica,sans-serif;
+	height: 22px;
+	margin-right: 5px !important;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	vertical-align: middle;
+    width: auto;
+    border: 1px solid #666666 !important;
+    text-shadow: none !important;
+}
+
+.button:HOVER{
+	background: url("#{resource['theme/img:button.png']}") scroll 0px 23px !important;
+	color: #FFFFFF !important;
+}
+
+.button:FOCUS{
+	background: url("#{resource['theme/img:button.png']}") scroll 0px 23px !important;
+	color: #FFFFFF !important;
+}
+
+.botoes{
+	background: url("#{resource['theme/img:bg_botoes_az.png']}") repeat-x scroll left top #C8DDED;
+    padding: 15px 25px;
+    margin: 30px 0;
+}
+
+label{
+	color: #666666;
+	font-weight: bold;
+	display: block;
+}
+
+.rotateFundo{
+	position: absolute;
+	left: 50%;
+	margin-top: 40px;
+	margin-left: -47.5px;
+}
+
+.rotate{
+	position: absolute;
+	left: 50%;
+	margin-top: 40px;
+	margin-left: -47.5px;
+}
+
+#fundoGeral{
+	background: url('#{resource['theme/img:bg_login.png']}') repeat-x scroll center top #0099FF;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	position: fixed;
+	left: 0px;
+}
+
+#fundoLogin{
+	background: url('#{resource['theme/img:bg_login_padrao.png']}') center no-repeat transparent;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	position: fixed;
+	left: 0px;
+}
+
+#janelaLogin{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -305px;
+	margin-top: -160px;
+}
+
+#loginTop{
+	background: url('#{resource['theme/img:bg_login_box_top.png']}') no-repeat transparent;
+	height: 120px;
+	width: 611px;
+}
+#loginMidle{
+	padding:40px 0px 20px 0px;
+	background: url('#{resource['theme/img:bg_login_box_meio.png']}') repeat-y transparent;
+	width: 611px;
+}
+#loginBottom{
+	background: url('#{resource['theme/img:bg_login_box_base.png']}') no-repeat transparent;
+	height: 30px;
+	width: 611px;
+}
+
+.resultado{
+	padding: 20px 0px 0px 0px;
+}
+
+.atendimento table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.atendimento td, .atendimento th{
+    color: #666666;
+    border: none !important;
+    vertical-align: middle;
+    padding: 10px 6px !important;
+    font-size: 11px !important;
+}
+
+.atendimento th, .atendimento th:HOVER{
+	background: #C8DDED !important;
+}
+
+.atendimento tr:HOVER {
+	background: #FFFAB4 !important;
+}
+
+.data, .hora, .periodo{
+	margin: 0px;
+	color: #666666;
+}
+
+.data span, .hora span, .periodo span{
+	font-weight: bold;
+}
+
+.ui-paginator-top{
+	display: none;
+}
+
+.ui-paginator-bottom{
+	background: none !important;
+}
+
+.ui-paginator-page{
+	font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    background: none !important;
+    border: none !important;
+    color: #949494 !important;
+    font-weight: normal !important;
+    text-shadow: none !important;
+}
+
+.ui-paginator-page:HOVER{
+    font-weight: bold !important;
+    color: #0099FF !important;
+}

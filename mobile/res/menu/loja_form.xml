@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mnuMaisOpcoes"
+        android:icon="@drawable/icon_menu"
+        android:orderInCategory="5"
+        android:showAsAction="always"
+        android:title="@string/menu_mais_opcoes">
+        <menu>
+            <item
+                android:id="@+id/mnuSincronizarDados"
+                android:icon="@drawable/icon_sincronizar"
+                android:showAsAction="always"
+                android:title="@string/menu_sincronizar_dados"/>
+            <item
+                android:id="@+id/mnuLocalizarLoja"
+                android:icon="@drawable/icon_localizar"
+                android:showAsAction="always"
+                android:title="@string/menu_localizar_loja"/>
+            <item
+                android:id="@+id/mnuPreferencias"
+                android:icon="@drawable/icon_preferencias"
+                android:showAsAction="always"
+                android:title="@string/menu_preferencias"/>
+        </menu>
+    </item>
+
+</menu>

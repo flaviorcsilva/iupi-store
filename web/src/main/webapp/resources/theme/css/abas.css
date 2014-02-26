@@ -1,0 +1,193 @@
+.abas {
+	color: #11666;
+	height: 34px;
+	background: url("#{resource['theme/img:bg_abas.png']}") repeat-x
+		bottom;
+}
+
+.abas ul {
+	padding: 10px 0px 0px 0px;
+}
+
+.abas ul li {
+	list-style: none;
+	position: relative;
+	float: left;
+	border: 1px solid #A8BCE4;
+	border-bottom: none !important;
+}
+
+.abas a.bt_botao {
+	background: url("#{resource['theme/img:bg_abas_on_off.png']}")
+		repeat-x top;
+	text-decoration: none;
+	line-height: 15px;
+	/* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 23px) */
+	padding-left: 9px; /* Width of left menu image */
+	font-size: 11px;
+	display: block;
+	height: 23px; /* Height of button background height */
+	float: left;
+}
+
+.abas a:link.bt_botao,.abas a:visited.bt_botao,.abas a:active.bt_botao {
+	color: #001b75; /*button text color*/
+}
+
+.abas a.bt_botao span {
+	padding: 4px 9px 4px 0;
+	/*Set 9px below to match value of 'padding-left' value above*/
+	display: block;
+	color: #666 !important;
+	cursor: pointer;
+}
+
+.abas a.bt_botao:hover {
+	background: url("#{resource['theme/img:bg_abas_on_off.png']}")
+		repeat-x center;
+}
+
+.abas a.bt_botao:hover span {
+	color: #001b75 !important;
+}
+
+.abas .abaAtiva a.bt_botao {
+	background: #FFFFFF !important;
+}
+
+.abas .abaAtiva a.bt_botao  span {
+	color: #001b75 !important;
+}
+
+/* Container you can use to surround a CSS button to clear float */
+/* .abas .bt_borda {
+						overflow:hidden;
+						} */
+
+/* CONFIGURAÇÃO DE SUB-MENU - NÍVEL 2 | Início */
+.abas ul li ul {
+	padding: 0px 0px 0px 15px !important;
+	border-bottom: #001b75 1px solid;
+	border-right: #001b75 1px solid;
+	border-left: #001b75 1px solid;
+	position: absolute;
+	margin-left: -1px;
+	min-width: 250px !important;
+	display: none;
+	z-index: 99;
+	top: 23px;
+}
+
+.abas ul li:hover ul,.abas ul li.hover ul {
+	display: block;
+}
+
+.abas ul li ul li a {
+	text-decoration: none;
+	display: block;
+	color: #000;
+	float: left;
+}
+
+.abas ul li ul li a:hover {
+	background: #073c79;
+	color: #fff;
+}
+
+.abas ul li ul li a {
+	padding: 3px 5px 3px 5px !important; /* TOP RIG BAS LEFT */
+	border-top: #001b75 1px solid;
+	clear: both;
+}
+
+.abas ul li ul li {
+	float: none;
+	clear: both;
+}
+
+.abas ul li ul li a {
+	float: none;
+}
+
+.abas ul li .dir2 a { /* submenu 2º nível com menu para 3º nível*/
+	background-image: url("../img/seta_blue.gif");
+	background-position: 98% 50%;
+	background-repeat: no-repeat;
+}
+
+.abas ul li .dir2 a:hover {
+	/* submenu 2º nível com menu para 3º nível */
+	background-image: url("../img/seta_white.gif");
+	background-position: 98% 50%;
+	background-repeat: no-repeat;
+}
+/* CONFIGURAÇÃO DE SUB-MENU - NÍVEL 2 | Fim */
+
+/* CONFIGURAÇÃO DE SUB-MENU - NÍVEL 3 | Início */
+.abas ul .dir li li a { /* submenu 3º nível */
+	background: #009ae7;
+	color: #fff;
+}
+
+.abas ul .dir li li a:hover { /* submenu 3º nível */
+	background-color: #ebf6fc;
+	color: #009ae7;
+}
+
+.abas ul li .dir2 li a,.abas ul li .dir2 li a:hover {
+	/* correção para não aparecer seta no 3º nível */
+	background-image: none;
+}
+
+.abas ul ul {
+	margin-left: 0px !important;
+	visibility: hidden;
+	position: absolute;
+}
+
+.abas ul ul li {
+	float: left;
+}
+
+.abas ul ul ul {
+	top: 0px;
+	left: 100%;
+}
+
+.abas ul li:hover>ul {
+	visibility: visible;
+}
+/* CONFIGURAÇÃO DE SUB-MENU - NÍVEL 3 | Fim */
+.abas .off {
+	color: #d6d6d6 !important;
+}
+
+.abas .off:hover {
+	background-color: #ebebeb !important;
+	color: #d6d6d6 !important;
+}
+
+.abasConteudo {
+	float: left;
+	border: 1px solid #a8bce4;
+	border-top: none !important;
+	width: 100%;
+	margin-bottom: 80px;
+}
+
+.abasConteudo .informacoes {
+	width: 100%;
+}
+
+.abasConteudo .informacoes table {
+	border: none;
+	margin: 0px;
+	padding: 10px;
+	width: 100%;
+}
+
+.abasConteudo .informacoes table thead {
+	font-size: 14px !important;
+	font-weight: bold !important;
+	height: 50px;
+}

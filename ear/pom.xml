@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>br.org.iupi.store</groupId>
+		<artifactId>iupi-store</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>iupi-store-ear</artifactId>
+	<packaging>ear</packaging>
+	<name>iupi! Store EAR Application</name>
+	
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+	<dependencies>
+		<!-- CORE -->
+		<dependency>
+			<groupId>br.org.iupi.store</groupId>
+			<artifactId>iupi-store-core</artifactId>
+			<type>jar</type>
+			<version>0.0.1</version>
+		</dependency>
+
+		<!-- SERVER -->	
+		<dependency>
+			<groupId>br.org.iupi.store</groupId>
+			<artifactId>iupi-store-server</artifactId>
+			<type>ejb</type>
+			<version>0.0.1</version>
+		</dependency>
+
+		<!-- WEB -->	
+		<dependency>
+			<groupId>br.org.iupi.store</groupId>
+			<artifactId>iupi-store-web</artifactId>
+			<type>war</type>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+	    <finalName>iupi-store-ear</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+					<generateApplicationXml>true</generateApplicationXml>
+					<version>6</version>
+					<modules>
+						<webModule>
+							<groupId>br.org.iupi.store</groupId>
+							<artifactId>iupi-store-web</artifactId>
+							<bundleFileName>iupi-store-web.war</bundleFileName>
+						</webModule>
+						<ejbModule>
+							<groupId>br.org.iupi.store</groupId>
+							<artifactId>iupi-store-server</artifactId>
+							<bundleFileName>iupi-store-server.jar</bundleFileName>
+						</ejbModule>
+					</modules>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+				</configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

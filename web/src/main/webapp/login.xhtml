@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="resources/template/layout.xhtml">
+	<ui:define name="content">
+		<div class="row">
+			<div id="fundoGeral">
+				<div id="fundoLogin">
+					<div id="janelaLogin" class="">
+						<div id="loginTop">
+
+							<div>
+								<div class="push_one five columns topMargin30">
+									<h:graphicImage library="theme"
+										name="img/logo_sis_wideview_color.png"
+										title="Wide View - BRB Banco de Brasília" />
+								</div>
+								<div class="five columns right topMargin30">
+									<a href="http://www.brb.com.br"><h:graphicImage
+											library="theme" name="img/logo_brb_color.png"
+											title="BRB Banco de Brasília" /></a>
+								</div>
+							</div>
+
+						</div>
+						
+                  <div class="twelve columns noTopMargin right textoCinza texto9">
+		               <p>
+		                     <h:outputText value="* " styleClass="required" />
+		                     <h:outputText value="Preenchimento obrigatório" />
+		               </p>
+                     <div class="clear"></div>
+                  </div>	
+                  					
+						<div id="loginMidle">
+							<h:form>
+								<p:messages id="growl" showDetail="false" autoUpdate="false" closable="true" />
+								<div class="row">
+									<div class="push_four four columns noTopMargin">
+										<h:outputLabel for="login" value="Login:" styleClass="bold textoAzul floatLeft topMargin5" >
+										     <h:outputText value=" *" styleClass="required" />
+										</h:outputLabel>
+										<p:inputText id="login" value="#{loginMBean.login}"
+											label="Login" required="true" styleClass="floatRight" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="push_four four columns topMargin10">
+										<h:outputLabel for="senha" value="Senha:" styleClass="bold textoAzul floatLeft topMargin5" >
+										       <h:outputText value=" *" styleClass="required" />
+                              </h:outputLabel>
+										<p:password id="senha" value="#{loginMBean.senha}"
+											label="Senha" required="true" styleClass="floatRight" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="push_four four columns topMargin10">
+
+										<p:commandButton value="ACESSAR" action="#{loginMBean.loga()}"
+											update="growl" ajax="false" styleClass="floatRight button" />
+									</div>
+								</div>
+							</h:form>
+						</div>
+						<div id="loginBottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+	<ui:define name="header">
+	</ui:define>
+
+	<ui:define name="menu">
+	</ui:define>
+
+	<ui:define name="infoAdcionais">
+	</ui:define>
+
+	<ui:define name="footer">
+	</ui:define>
+
+</ui:composition>
+
+</html>
